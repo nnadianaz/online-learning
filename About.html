@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>About Us</title>
+
+    <style>
+    
+        .slider {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: all 0.3s ease;
+        
+            
+        }
+        .nav-item {
+            color: gray;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item.active {
+        
+            color: #007bff;
+        }
+        .e {
+    height: 1760px;
+    width: auto;
+    background-color: #F7F7F7;
+    
+}
+.d {
+    height: 300px;
+    width: auto;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../Assets/pexels-artempodrez-4492129.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.star {
+    position: absolute;
+    left: 250px;
+    top: 3480px;
+    bottom: 100; 
+    width: 840px;
+    height: 250px;
+    background-color: white;
+}
+.black{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 1890px;
+    bottom: 0; 
+    width: auto;
+    height: 700px;
+    background-color: black;
+    z-index: -1;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 75px;
+    
+
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row img:last-child {
+  float: right;
+}
+.container{
+   
+    display: flex;
+    padding-top: 50px;
+    margin-left: 250px;
+
+}
+.left{
+    width: 50%;
+    height: 200px;
+    background-color: white;
+
+}
+.right{
+    width: 50%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white ;
+    margin-left: -90px;
+    margin-top: 100px;
+}
+.footer1{
+    height: 200px;
+    width: 400px;
+    background-color: #0075FF;
+}
+.footer2{
+    height: 200px;
+    width: 400px;
+    background-color: white;
+}
+.text{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; color: white; 
+    transform: scaleX(1);
+    padding-top: 100px;
+}
+.h{
+    font-size: 2rem; font-weight: bold;
+    font-family: serif;
+
+}
+.icon{
+    height: 10px;
+    width: 10px;
+    filter: brightness(0.9) invert(0.9);
+}
+
+    </style>
+
+
+</head>
+
+<script>
+
+    const slider = document.getElementById('slider');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    function activateTab(element) {
+        navItems.forEach(item => item.classList.remove('active'));
+        element.classList.add('active');
+        moveSlider(element);
+    }
+
+    function moveSlider(element) {
+        const rect = element.getBoundingClientRect();
+        slider.style.width = `${rect.width}px`;
+        slider.style.left = `${element.offsetLeft}px`;
+    }
+
+    // Initialize the slider to the first tab
+    window.onload = () => {
+        const initialTab = document.querySelector('.nav-item');
+        if (initialTab) {
+            initialTab.classList.add('active');
+            moveSlider(initialTab);
+        }
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+            const initialTab = document.querySelector('.nav-item');
+            if (initialTab) {
+                activateTab(initialTab);
+            }
+        });
+
+        
+</script>
+
+
+<body class="bg-[#F7F7F7]">
+
+    <div class="bg-[#F7F7F7] text-[#B9B9B9]">
+        <div class=" flex justify-between mx-28 py-2 font-mono">
+            <div class="flex">info@webmail.com
+                <div class="nav-item cursor-pointer mx-4 ">|</div>
+                <div>24/7</div>
+            </div>
+            <div class="">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="flex items-center justify-between pt-2 relative bg-white p-5 shadow-lg">
+            
+        
+                <h2 class="font-serif font-semibold text-2xl ml-32">Edulan<span class="text-[#0075FF]">.</span>
+                </h2>
+                <ul class="flex space-x-4 font-semibold text-xs">
+                    <li></li><a href="Index.html" class="nav-item cursor-pointer" onclick="activateTab(this)">HOME</a></li>
+                    <li></li><a href="courses.html" class="nav-item cursor-pointer" onclick="activateTab(this)">OUR COURSES ↓</a>
+                    <ul class="sub-menu" style="display: none;">
+                        <li><a href="#">Course 1</a></li>
+                        <li><a href="#">Course 2</a></li>
+                        <li><a href="#">Course 3</a></li>
+                    </ul></li>
+                    <li></li><a href="About.html" class="nav-item cursor-pointer " onclick="activateTab(this)">ABOUT US</a></li>
+                    <li></li><a href="membership.html" class="nav-item cursor-pointer" onclick="activateTab(this)">PAGES</a></li>
+                    <li></li><a href="single-blog .html" class="nav-item cursor-pointer" onclick="activateTab(this)">BLOG & NEWS</a></li>
+                    <li></li><a href="contect.html" class="nav-item cursor-pointer" onclick="activateTab(this)">CONTACT US</a></li>
+                </ul>
+            <div id="slider" class="slider"></div>
+        
+            <ul class="flex flex-wrap items-center space-x-4">
+                <li>
+                    <form action="" class="relative">
+                        <input type="search" name="search" id="search"
+                        class="relative peer z-10 bg-transparent w-8 h-8 rounded-full border cursor-pointer outline-none
+                        pl-8 focus:w-40 focus:h-8 focus:border-gray-300 focus:cursor-text focus:pl-10 focus:pr-2 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 absolute inset-y-0 my-auto left-2 stroke-gray-500 peer-focus:stroke-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </form>
+                </li>
+                <li>
+                     <form action="" class="relative">
+                        <input type="search" name="search" id="search"
+                        class="relative peer z-10 bg-transparent w-8 h-8 rounded-full border cursor-pointer outline-none
+                        pl-8 focus:w-40 focus:h-8 focus:border-gray-300 focus:cursor-text focus:pl-10 focus:pr-2 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 absolute inset-y-0 my-auto left-2 stroke-gray-500 peer-focus:stroke-lime-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </form> 
+                </li>
+                <li>
+                    <p class="text-gray-300 mx-5">│</p>
+                </li>
+                <li>
+                    
+                    <a href="login.html" class="text-black hover:text-blue-600 text-xs mr-10 font-bold">
+                        ACCOUNT ↓</a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+
+        <div class="d">
+            
+            <section class="text">
+            <h1 class="h">About Us</h1>
+            <div class="flex flex-row">
+            <img src="home.png" alt="" class="icon mr-2">
+            <p class="text-xs">Home/</p>
+            <p class="text-blue-600 text-xs">About Us</p>
+        </div>
+            </section>
+        </div>
+        <div class="flex flex-row justify-around mt-20 ml-44 mr-44">
+            <div class="flex">
+                <div><img src="badge.png" alt="" srcset="" class="h-10 w-10 mt-2"></div>
+                <div>
+                    <h1 class="text-3xl font-semibold font sarif">146</h1>
+                <p class="text-xs">AWARD WINNING</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div><img src="graduated.png" alt="" srcset="" class="h-10 w-10"></div>
+                <div><h1 class="text-3xl font-semibold font sarif">28K</h1>
+                    <p class="text-xs">TOTAL STUDENTS</p></div>
+            </div>
+            <div class="flex">
+                <div><img src="male.png" alt="" srcset="" class="h-10 w-10"></div>
+                <div>
+                    <h1 class="text-3xl font-semibold font sarif">138</h1>
+                <p class="text-xs">TOTAL INSTRUCTOR</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div><img src="earth-grid.png" alt="" srcset="" class="h-10 w-10"></div>
+               <div>
+                <h1 class="text-3xl font-semibold font sarif">214</h1>
+                <p class="text-xs">OVER THE WORLD</p>
+               </div>
+            </div>
+        </div>
+
+       <div class="flex-row justify-around">
+
+        <div class="container">
+            <div class="left">
+                <img src="wes-hicks-4-EeTnaC1S4.jpg" alt="" srcset="" class="h-48">
+            </div>
+            <div class="right">
+                <img src="jeshoots-com--2vD8lIhdnw-unsplash.jpg" alt="" class="h-48">
+            </div>
+           </div>
+
+           <div class="flex-column mr-44 mt-20">
+            <h1 class="font-semibold font-serif text-2xl">We are tutor an online learning Community</h1>
+            <p class="mt-4 text-xs text-[#B9B9B9]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt aspernatur fugiat facere, dicta inventore et earum provident iusto dolores nihil accusamus odio laboriosam! Voluptates, debitis ut consectetur repellendus exercitationem error?</p>
+            <div class="flex-row justify-between mr-32 mt-2 ">
+                <button class="border bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                    Our Mission
+                    </button>
+                    <button class="border bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                      Our Visin
+                        </button>
+                        <button class="border bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                          Our Values
+                            </button>
+            </div>
+            <p class="mt-4 text-xs text-[#B9B9B9]">dicta inventore et earum provident iusto dolores nihil accusamus odio laboriosam! Voluptates, debitis ut consectetur repellendus exercitationem error?</p>
+            <div class="flex justify-between mt-4">
+                <div class="mt-4">
+                <div class="flex items-center">
+                  <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                    <i class="fas fa-check"></i>
+                  </span>
+                  <p>Expert Trainer</p>
+                </div>
+                <div class="flex items-center mt-4">
+                  <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                    <i class="fas fa-check"></i>
+                  </span>
+                  <p>Remote Learning</p>
+                </div>
+            </div>
+            <div class="mt-2">
+                <div class="flex items-center">
+                  <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                    <i class="fas fa-check"></i>
+                  </span>
+                  <p>Lifetime Access</p>
+                </div>
+                <div class="flex items-center mt-4">
+                  <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                    <i class="fas fa-check"></i>
+                  </span>
+                  Self Development
+                </div>
+            </div>
+              </div>
+           </div>
+
+       </div>
+
+        </div>
+
+        <div class="flex center ml-96 mt-10">
+            <video width="500" height="400" controls>
+                <source src="4495519-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class=" flex items-center justify-around mr-32 ml-32 pt-20">
+            <div class="mt-10">
+            <h1 class="bg-[#F7F7F7] p-2 font-serif text-2xl font-semibold mr-64">Featured Instructors</h1>
+            <p class="text-xs text-[#B9B9B9]">Online learning offers a new way to explore subjects <br>you are passionate about.</p>
+        </div>
+        <button class="mt-20 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+            VIEW ALL
+            <span class="ml-2 cursor-pointer">&rarr;</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 w-50 px-32 mr-32 ml-32 mt-10">
+            <div class="bg-white ml-10 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="pexels-olly-3769021.jpg" alt="" class="h-auto w-100">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif text-[#E4175C]">Rakibul Hasan Deewan</h2>
+            </div>
+                </div>
+                <p class="flex items-center justify-around  mt-2 font-semibold text-xs pb-4">Softwarte Enginnere</p>
+            </div>
+            <div class="bg-white p-0 ml-10 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="" class="h-100 w-100">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif text-[#E4175C]">Rakibul Hasan Deewan</h2>
+            </div>
+                </div>
+                <p class="flex items-center justify-around  mt-2 font-semibold text-xs pb-4">Softwarte Enginnere</p>
+            </div>
+            <div class="bg-white ml-10 p-0 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="wes-hicks-4-EeTnaC1S4-unsplash.jpg" alt="" class="h-100 w-100">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif text-[#E4175C]">Rakibul Hasan Deewan</h2>
+            </div>
+                </div>
+                <p class="flex items-center justify-around  mt-2 font-semibold text-xs pb-4">Softwarte Enginnere</p>
+            </div>
+            
+            </div>
+
+            <div class="footer">
+                <!-- class="flex align-center justify-center pt-20 ml-10" -->
+                <div class="footer1">
+                    <div class="mt-10 ml-10">
+                        <p class="text-xs text-white"># Become a Instructor</p>
+                        <h1 class="font-serif font-semibold mt-2  text-white">Become a Instructor</h1>
+                        <button class="border mt-5 mt-5 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                            Apply Now
+                            <span class="ml-2 cursor-pointer">&rarr;</span>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <div class="mt-10 ml-10">
+                        <p class="text-xs text-[#E4175C]"># Become a Instructor</p>
+                        <h1 class="font-serif font-semibold mt-2">Become a Instructor</h1>
+                        <button class="mt-5 mt-5 bg-rose-500 hover:bg-rose-700 text-white py-2 px-4 text-xs">
+                            Contact Us
+                            <span class="ml-2 cursor-pointer">&rarr;</span>
+                    </div>
+                </div>
+               </div>
+
+               <div class="black">
+                <div class="relative">
+                    <div class="flex items-center justify-around  ml-32 mt-72 mr-32">
+                <h1 class="text-white text-2xl font-serif font-semibold">Subscribe Newsletter</h1>
+                <div class="flex flex-row items-center">
+                    <label for="email" class="mr-2 text-white"></label>
+                    <input type="email" id="email" class="px-2 py-1" placeholder="Enter your email">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white text-xs py-2 px-3 flex items-center">
+                        Subscribe
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+            <div class="flex flex-column align-items justify-around text-white mt-20">
+                <div>
+                    <h3>About XProtex</h3>
+                    <p class="text-xs">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br>Necessitatibus minus amet reprehen<br> consequuntur possimus quos <br>recusandae quas aut veniam.</p>
+                    <div class="flex flex-row justify-between">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3>CATEGORIES</h3>
+                    <p class="text-xs">>> All Courses</p>
+                    <p class="text-xs">>> Design Courses</p>
+                    <p class="text-xs">>> Branding Design</p>
+                    <p class="text-xs">>> Architecture</p>
+                    <p class="text-xs">>> Digital Branding</p>
+                </div>
+                <div>
+                    <h3>CATEGORIES</h3>
+                    <p class="text-xs">>> All Courses</p>
+                    <p class="text-xs">>> Design Courses</p>
+                    <p class="text-xs">>> Branding Design</p>
+                    <p class="text-xs">>> Architecture</p>
+                    <p class="text-xs">>> Digital Branding</p>
+                </div>
+                <div>
+                    <h3>Get In Touch</h3>
+                    <p class="text-xs">786/A Romada tower mall <br>Brookly, NYL</p>
+                    <p class="text-xs">+987 764 8376278 87</p>
+                    <p class="text-xs">(987)787 9876565 56</p>
+                    <p class="text-xs">info@webmail.com>
+                    <p class="text-xs">jobsinfo@webmail</p>
+                </div>
+            </div>
+            </div>
+        
+            <footer class="flex align-center pt-4 relative border mt-32 bg-[#000000]">
+                <h2 class="font-serif font-semibold text-2xl ml-32 text-white">Edulan<span class="text-[#0075FF]">.</span>
+                </h2>
+                <div class=" text-[#B9B9B9]">
+                    <div class=" flex flex-row justify-between mx-32 py-2 font-mono">
+                        <div class="flex flex-row align-items justify-between mr-56">info@webmail.com
+                            <div class="nav-item cursor-pointer mx-4 ">|</div>
+                            <div>24/7</div>
+                            <button class="border ml-44 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                            Sign Up
+                            <span class="ml-2 cursor-pointer">&rarr;</span>
+                            </button>
+                            <div class="ml-10">
+                                <button class="border bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                                    Login
+                                    <span class="ml-2 cursor-pointer">&rarr;</span>
+                                    </button>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                </div>
+    
+</body>
+</html>

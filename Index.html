@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Online Learning</title>
+
+<style>
+    
+        .slider {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: all 0.3s ease;
+        
+            
+        }
+        .nav-item {
+            color: gray;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item.active {
+        
+            color: #007bff;
+        }
+        .e {
+    height: 1760px;
+    width: auto;
+    background-color: #F7F7F7;
+    
+}
+.d {
+    height: 400px;
+    width: auto;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../Assets/pexels-pixabay-207582.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.star {
+    position: absolute;
+    left: 250px;
+    top: 3480px;
+    bottom: 100; 
+    width: 840px;
+    height: 250px;
+    background-color: white;
+}
+.black{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 5300px;
+    bottom: 0; 
+    width: auto;
+    height: 700px;
+    background-color: black;
+    z-index: -1;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 75px;
+    
+
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row img:last-child {
+  float: right;
+}
+.container{
+    width: auto;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.left{
+    width: 95%;
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../Assets/pexel.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.right{
+    width: 95%;
+    height: 300px;
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-left: -100px;
+    margin-top: 100px;
+}
+.footer1{
+    height: 200px;
+    width: 400px;
+    background-color: #0075FF;
+}
+.footer2{
+    height: 200px;
+    width: 400px;
+    background-color: white;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="bg-[#F7F7F7] text-[#B9B9B9]">
+    <div class=" flex justify-between mx-28 py-2 font-mono">
+        <div class="flex">info@webmail.com
+            <div class="nav-item cursor-pointer mx-4 ">|</div>
+            <div>24/7</div>
+        </div>
+        <div class="">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </div>
+</div>
+
+<header>
+<nav class="flex items-center justify-between pt-2 relative bg-white p-5 shadow-lg">
+    
+
+        <h2 class="font-serif font-semibold text-2xl ml-32">Edulan<span class="text-[#0075FF]">.</span>
+        </h2>
+        <ul class="flex space-x-4 font-semibold text-xs">
+            <li></li><a href="Index.html" class="nav-item cursor-pointer" onclick="activateTab(this)">HOME</a></li>
+            <li></li><a href="courses.html" class="nav-item cursor-pointer" onclick="activateTab(this)">OUR COURSES ↓</a>
+            <li></li><a href="About.html" class="nav-item cursor-pointer " onclick="activateTab(this)">ABOUT US</a></li>
+            <li></li><a href="membership.html" class="nav-item cursor-pointer" onclick="activateTab(this)">PAGES</a></li>
+            <li></li><a href="single-blog .html" class="nav-item cursor-pointer" onclick="activateTab(this)">BLOG & NEWS</a></li>
+            <li></li><a href="contect.html" class="nav-item cursor-pointer" onclick="activateTab(this)">CONTACT US</a></li>
+        </ul>
+    <div id="slider" class="slider"></div>
+
+    <ul class="flex flex-wrap items-center space-x-4">
+        <li>
+            <form action="" class="relative">
+                <input type="search" name="search" id="search"
+                class="relative peer z-10 bg-transparent w-8 h-8 rounded-full border cursor-pointer outline-none
+                pl-8 focus:w-40 focus:h-8 focus:border-gray-300 focus:cursor-text focus:pl-10 focus:pr-2 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 absolute inset-y-0 my-auto left-2 stroke-gray-500 peer-focus:stroke-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+            </form>
+        </li>
+        <li>
+             <form action="" class="relative">
+                <input type="search" name="search" id="search"
+                class="relative peer z-10 bg-transparent w-8 h-8 rounded-full border cursor-pointer outline-none
+                pl-8 focus:w-40 focus:h-8 focus:border-gray-300 focus:cursor-text focus:pl-10 focus:pr-2 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 absolute inset-y-0 my-auto left-2 stroke-gray-500 peer-focus:stroke-lime-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </form> 
+        </li>
+        <li>
+            <p class="text-gray-300 mx-5">│</p>
+        </li>
+        <li>
+            
+            <a href="login.html" class="text-black hover:text-blue-600 text-xs mr-10 font-bold">
+                ACCOUNT ↓</a>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<script>
+
+    const slider = document.getElementById('slider');
+    const navItems = document.querySelectorAll('.nav-item');
+
+    function activateTab(element) {
+        navItems.forEach(item => item.classList.remove('active'));
+        element.classList.add('active');
+        moveSlider(element);
+    }
+
+    function moveSlider(element) {
+        const rect = element.getBoundingClientRect();
+        slider.style.width = `${rect.width}px`;
+        slider.style.left = `${element.offsetLeft}px`;
+    }
+
+    // Initialize the slider to the first tab
+    window.onload = () => {
+        const initialTab = document.querySelector('.nav-item');
+        if (initialTab) {
+            initialTab.classList.add('active');
+            moveSlider(initialTab);
+        }
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+            const initialTab = document.querySelector('.nav-item');
+            if (initialTab) {
+                activateTab(initialTab);
+            }
+        });
+</script>
+
+<div class="flex items-center justify-around ml-44 mt-10">
+    <div class="flex-column">
+        <img src="speech-bubble.png" alt="" class="h-20 w-20 mb-10">
+    <p class="text-[#E4175C] font-semibold font"># Learn Anything, Anytime, Anywhere</p>
+    <h1 class="mt-2 text-5xl font-serif font-semibold ">Best Online Learning <br>For Your Future.</h1>
+    <p class="mt-2">We believe everyone hasthe capacity to be creative. Tuitor is a <br>place where people develop their own potential.</p>
+    <button class="mt-5 mt-5 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+        START TRIAL
+        <span class="ml-2 cursor-pointer">&rarr;</span>
+      </button>
+      <button class="mt-5 ml-20 mt-5 bg-rose-500 hover:bg-rose-700 text-white py-2 px-4 text-xs">
+        START TRIAL
+        <span class="ml-2 cursor-pointer">&rarr;</span>
+      </button>
+   
+</div>
+    <div class="">
+    <dotlottie-player src="https://lottie.host/084378c2-c981-4d69-b2d6-0a407f92ad18/sDVURZgG5i.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+</div>
+
+</div>
+<div class="bg-[#F7F7F7] mt-20">
+<div class=" flex items-center justify-around ml-2">
+    <div>
+    <h1 class="text-2xl font-serif font-semibold mr-56 pt-20">Recent Popular Subjects</h1>
+    <p class="mt-2 text-xs">Online learning offers a new way to explore subjects <br>you are passionate about</p>
+</div>
+<button class="mt-5 mt-5 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+    VIEW ALL
+    <span class="ml-2 cursor-pointer">&rarr;</span>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full px-44 mt-20 mb-20">
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="coding_2703928.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Computer Science</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+        <!-- .button {
+            transform: rotate(90deg);
+        } -->
+    </div>
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="coding_2703928.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Web Development</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+        <!-- .button {
+            transform: rotate(90deg);
+        } -->
+    </div>
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="open-book_893000.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Buissness </h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+    </div>
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="data-science_5230784.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Data Science</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full px-44 ">
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="engineering_3079162.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Engineering</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+    </div>
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="user-experience_2274996.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">User Experience</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+    </div>
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="mental.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Psychology</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+    </div>
+    <div class="bg-white p-6 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+        <img src="open-book_893000.png" alt="" class="h-10 w-10">
+        <h2 class="text-lg font-semibold">Architecture Planning</h2>
+        <p class="mt-2 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, laborum laboriosam iure est consequatur culpa sed eum ipsa perferendis.</p>
+        <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+            →
+        </button>
+    </div>
+</div>
+</div>
+
+<div class="flex items-center justify-around ml-44 mt-20">
+    <div class="w-30 mr-32">
+        <video autoplay loop muted src="istockphoto-1255448750-640_adpp_is.mp4" ></video>
+    </div>
+    <div class="flex-column mr-32">
+        <h1 class="mt-2 text-2xl font-serif font-semibold ">Learn something new, and<br>Grow yourskills.</h1>
+        <p class="mt-2">We believe everyone hasthe capacity to be creative. Tuitor is a <br>place where people develop their own potential.</p>
+        <div class="flex justify-between mt-4">
+            <div class="mt-2">
+            <div class="flex items-center">
+              <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                <i class="fas fa-check"></i>
+              </span>
+              <p>Expert Trainer</p>
+            </div>
+            <div class="flex items-center mt-4">
+              <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                <i class="fas fa-check"></i>
+              </span>
+              <p>Remote Learning</p>
+            </div>
+        </div>
+        <div class="mt-2">
+            <div class="flex items-center">
+              <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                <i class="fas fa-check"></i>
+              </span>
+              <p>Lifetime Access</p>
+            </div>
+            <div class="flex items-center mt-4">
+              <span class="flex justify-center items-center w-6 h-6 rounded-full bg-gray-200 text-gray-600">
+                <i class="fas fa-check"></i>
+              </span>
+              Self Development
+            </div>
+        </div>
+          </div>
+        <button class="mt-5 mt-5 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+            VIEW COURSES
+            <span class="ml-2 cursor-pointer">&rarr;</span>
+          </button>
+          <button class="mt-5 ml-20 mt-5 bg-rose-500 hover:bg-rose-700 text-white py-2 px-4 text-xs">
+            LEARN MORE
+            <span class="ml-2 cursor-pointer">&rarr;</span>
+          </button>
+        </div>
+    </div>
+
+    <div class="bg-[#F7F7F7] mt-32">
+        <div class=" flex items-center justify-around ml-2">
+            <div>
+            <h1 class="text-2xl font-serif font-semibold pt-20 mr-56">Find the right course for you</h1>
+            <p class="mt-2 text-xs">Online learning offers a new way to explore subjects <br>you are passionate about</p>
+        </div>
+        <button class="mt-5 mt-5 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+            VIEW ALL
+            <span class="ml-2 cursor-pointer">&rarr;</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full px-44 mt-20 mb-20">
+            <div class="bg-white p-2 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="pexels-olly-3769021.jpg" alt="" class="h-48 w-96">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                        <p class="text-[#E4175C] mt-4 font-semibold mr-10 text-sm">Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-[#0075FF] mt-4 font-semibold text-sm">$246</p>
+                    </div>
+                </div>
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif">The power of Podcast for Story telling Process</h2>
+                
+                <div class="flex-column items-center mt-4">
+                    <div class="flex items-center ml-2">
+                        <p class="text-xs mr-2 text-[#B9B9B9]">13 votes</p>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                    </div>
+                    <div class="text-xs flex items-center mt-4"> 
+                    <div class="flex items-center">
+                      <i class="fas fa-comment text-gray-600 ml-2"></i>
+                      <span class="ml-1 mr-5 text-gray-600">12</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">5k</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-eye text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">100k</span>
+                    </div>
+                    <div class="flex items-center ml-auto">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-8 w-8 rounded-full">
+                      </div>
+                </div>
+                  </div>
+            </div>
+            
+            <div class="bg-white p-2 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="giovanni-gagliardi-fvT3t9iOaJI-unsplash.jpg" alt="" class="h-48 w-96">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                        <p class="text-[#E4175C] mt-4 font-semibold mr-10 text-sm">Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-[#0075FF] mt-4 font-semibold text-sm">$246</p>
+                    </div>
+                </div>
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif">The power of Podcast for Story telling Process</h2>
+                
+                <div class="flex-column items-center mt-4">
+                    <div class="flex items-center ml-2">
+                        <p class="text-xs mr-2 text-[#B9B9B9]">13 votes</p>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                    </div>
+                    <div class="text-xs flex items-center mt-4"> 
+                    <div class="flex items-center">
+                      <i class="fas fa-comment text-gray-600 ml-2"></i>
+                      <span class="ml-1 mr-5 text-gray-600">12</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">5k</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-eye text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">100k</span>
+                    </div>
+                    <div class="flex items-center ml-auto">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-8 w-8 rounded-full">
+                      </div>
+                </div>
+                  </div>
+                
+            </div>
+            <div class="bg-white p-2 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="pexels-diva-plavalaguna-6937871.jpg" alt="" class="h-48 w-96">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                        <p class="text-[#E4175C] mt-4 font-semibold mr-10 text-sm">Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-[#0075FF] mt-4 font-semibold text-sm">$246</p>
+                    </div>
+                </div>
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif">The power of Podcast for Story telling Process</h2>
+                
+                <div class="flex-column items-center mt-4">
+                    <div class="flex items-center ml-2">
+                        <p class="text-xs mr-2 text-[#B9B9B9]">13 votes</p>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                    </div>
+                    <div class="text-xs flex items-center mt-4"> 
+                    <div class="flex items-center">
+                      <i class="fas fa-comment text-gray-600 ml-2"></i>
+                      <span class="ml-1 mr-5 text-gray-600">12</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">5k</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-eye text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">100k</span>
+                    </div>
+                    <div class="flex items-center ml-auto">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-8 w-8 rounded-full">
+                      </div>
+                </div>
+                  </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full px-44 pb-20">
+            <div class="bg-white p-2 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="pexels-julia-m-cameron-4144222.jpg" alt="" class="h-48 w-96">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                        <p class="text-[#E4175C] mt-4 font-semibold mr-10 text-sm">Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-[#0075FF] mt-4 font-semibold text-sm">$246</p>
+                    </div>
+                </div>
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif">The power of Podcast for Story telling Process</h2>
+                
+                <div class="flex-column items-center mt-4">
+                    <div class="flex items-center ml-2">
+                        <p class="text-xs mr-2 text-[#B9B9B9]">13 votes</p>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                    </div>
+                    <div class="text-xs flex items-center mt-4"> 
+                    <div class="flex items-center">
+                      <i class="fas fa-comment text-gray-600 ml-2"></i>
+                      <span class="ml-1 mr-5 text-gray-600">12</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">5k</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-eye text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">100k</span>
+                    </div>
+                    <div class="flex items-center ml-auto">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-8 w-8 rounded-full">
+                      </div>
+                </div>
+                  </div>
+                
+            </div>
+            <div class="bg-white p-2 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="thomas-park-6MePtA9EVDA-unsplash.jpg" alt="" class="h-48 w-96">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                        <p class="text-[#E4175C] mt-4 font-semibold mr-10 text-sm">Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-[#0075FF] mt-4 font-semibold text-sm">$246</p>
+                    </div>
+                </div>
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif">The power of Podcast for Story telling Process</h2>
+                
+                <div class="flex-column items-center mt-4">
+                    <div class="flex items-center ml-2">
+                        <p class="text-xs mr-2 text-[#B9B9B9]">13 votes</p>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                    </div>
+                    <div class="text-xs flex items-center mt-4"> 
+                    <div class="flex items-center">
+                      <i class="fas fa-comment text-gray-600 ml-2"></i>
+                      <span class="ml-1 mr-5 text-gray-600">12</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">5k</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-eye text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">100k</span>
+                    </div>
+                    <div class="flex items-center ml-auto">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-8 w-8 rounded-full">
+                      </div>
+                </div>
+                  </div>
+                
+            </div>
+            <div class="bg-white p-2 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                <img src="pexels-olly-3775128.jpg" alt="" class="h-48 w-96">
+                <div class="flex items-center justify-around">
+                    <div class="">
+                        <p class="text-[#E4175C] mt-4 font-semibold mr-10 text-sm">Architecture</p>
+                    </div>
+                    <div>
+                        <p class="text-[#0075FF] mt-4 font-semibold text-sm">$246</p>
+                    </div>
+                </div>
+                <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif">The power of Podcast for Story telling Process</h2>
+                
+                <div class="flex-column items-center mt-4">
+                    <div class="flex items-center ml-2">
+                        <p class="text-xs mr-2 text-[#B9B9B9]">13 votes</p>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                        <i class="fas fa-star text-gray-400"></i>
+                    </div>
+                    <div class="text-xs flex items-center mt-4"> 
+                    <div class="flex items-center">
+                      <i class="fas fa-comment text-gray-600 ml-2"></i>
+                      <span class="ml-1 mr-5 text-gray-600">12</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-user text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">5k</span>
+                    </div>
+                    <div class="flex items-center">
+                      <i class="fas fa-eye text-gray-600"></i>
+                      <span class="ml-1 mr-5 text-gray-600">100k</span>
+                    </div>
+                    <div class="flex items-center ml-auto">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-8 w-8 rounded-full">
+                        
+                      </div>
+                </div>
+                  </div>
+                
+            </div>
+                
+            </div>
+        </div>
+        </div>
+        <div class="d">
+        </div>
+        <div class="star">
+
+              <div class="flex flex-col justify-center items-center pt-10">
+                <h2 class="text-2xl font-semibold font-serif">If you need join our course</h2>
+                <p class="text-center">We believe everyone has the capacity to be creative. Tutor is a place where</p>
+                <p class="text-center">people develop their own potential.</p>
+                <div class="flex flex-row justify-between w-full mt-5">
+                  <img src="speech-bubble.png" alt="" class="h-20 w-20 ml-10 mt-10">
+                 
+                  
+                  <div class="flex flex-row items-center justify-between">
+                    <label for="email" class="mr-2"></label>
+                    <input type="email" id="email" class=" px-2 py-1" placeholder="Enter your email">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white text-xs py-2 px-3 flex items-center">
+                      Submit Now
+                      <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <img src="light-bulb.png" alt="" class="h-20 w-20 mr-10 mt-10">
+                </div>
+              </div>
+
+        </div>
+        <div class="e">
+            <div>
+            <div class=" flex items-center justify-around ml-32 mr-44 pt-20">
+                <div class="mt-32">
+                <h1 class="bg-[#F7F7F7] p-2 font-serif text-2xl font-semibold mr-64">Featured Instructors</h1>
+                <p class="text-xs text-[#B9B9B9]">Online learning offers a new way to explore subjects <br>you are passionate about.</p>
+            </div>
+            <button class="mt-20 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+                VIEW ALL
+                <span class="ml-2 cursor-pointer">&rarr;</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 w-50 px-32 mr-32 ml-32 mt-10">
+                <div class="bg-white ml-10 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                    <img src="pexels-olly-3769021.jpg" alt="" class="h-auto w-100">
+                    <div class="flex items-center justify-around">
+                        <div class="">
+                    <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif text-[#E4175C]">Rakibul Hasan Deewan</h2>
+                </div>
+                    </div>
+                    <p class="flex items-center justify-around  mt-2 font-semibold text-xs pb-4">Softwarte Enginnere</p>
+                </div>
+                <div class="bg-white p-0 ml-10 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                    <img src="pexels-olly-3769021.jpg" alt="" class="h-100 w-100">
+                    <div class="flex items-center justify-around">
+                        <div class="">
+                    <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif text-[#E4175C]">Rakibul Hasan Deewan</h2>
+                </div>
+                    </div>
+                    <p class="flex items-center justify-around  mt-2 font-semibold text-xs pb-4">Softwarte Enginnere</p>
+                </div>
+                <div class="bg-white ml-10 p-0 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                    <img src="pexels-olly-3769021.jpg" alt="" class="h-100 w-100">
+                    <div class="flex items-center justify-around">
+                        <div class="">
+                    <h2 class="mt-4 mr-4 ml-3 text-sm font-semibold font-serif text-[#E4175C]">Rakibul Hasan Deewan</h2>
+                </div>
+                    </div>
+                    <p class="flex items-center justify-around  mt-2 font-semibold text-xs pb-4">Softwarte Enginnere</p>
+                </div>
+                
+                </div>
+                <div class="container">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div class="flex-column">
+                        <div class="flex items-center justify-center mt-2 ml-10">
+                        <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 h-20 w-20">
+                            
+                        <div class="flex flex-row">
+
+                        </div>
+                        <p class="">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et libero quam quia hic architecto laudantium assumenda veritatis at fugit, doloremque minus sequi enim, nobis porro repudiandae distinctio rerum eos quod!
+                        </p>
+                    </div>
+                    <div class="flex-column items-center justify-center mt-10 ml-32">
+                            <h1 class="mt-10 font-semibold">Rasalina De Williamson</h1>
+                            <p class="text-xs text-[#E4175C]">
+                                Founder,Foxer.co
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div  class="bg-[#F7F7F7]">
+                        <div class="p-10 flex items-center justify-around ml-44 mr-44">
+                            <div class="">
+                            <h1 class="text-2xl font-serif font-semibold mr-64 mt-20">Every single update from here</h1>
+                            <p class="text-xs mr-2 text-[#B9B9B9]">Online learning offers a new way to explore subjects <br>you are passionate about.</p>
+                        </div>
+                        <button class="mt-10 bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 text-xs">
+                            VIEW ALL
+                            <span class="ml-2 cursor-pointer">&rarr;</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F7F7] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-50 px-32 mr-32 ml-32 mt-10">
+                        <div class="bg-white pt-5 ml-10 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                             
+                            <h3 class=" font-semibold font-serif ml-5">Fashion and Luxury Fashion Issues</h3>
+                            <img src="pexels-olly-3769021.jpg" alt="" class="mt-2 h-100 w-100 mb-20">
+                            <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+                                →
+                            </button>
+                        </div>
+                        <div class="bg-white ml-10 pt-5 shadow-md relative transform transition-transform hover:scale-105 hover:z-10">
+                            
+                            <h3 class=" font-serif font-semibold ml-5">Making Music With Other Super People </h3>
+                            <img src="pexels-olly-3769021.jpg" alt="" class="mt-2 h-100 w-100 mb-20">
+                            <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+                                →
+                            </button>
+                        </div>
+                        <div class="bg-white ml-10 shadow-md pt-5 relative transform transition-transform hover:scale-105 hover:z-10">
+                            
+                            <h3 class=" font-semibold font-serif ml-5">The Power of Podcast for Story telling system</h3>
+                            <img src="pexels-olly-3769021.jpg" alt="" class="mr-4 mt-2 h-100 w-100 mb-20">
+                            <button class="absolute bottom-2 right-2 border bg-transparent text-black p-2 mt-20 transform transition-transform hover:bg-blue-500 hover:text-white hover:scale-125">
+                                →
+                            </button>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <!-- class="flex align-center justify-center pt-20 ml-10" -->
+                        <div class="footer1">
+                            <div class="mt-10 ml-10">
+                                <p class="text-xs text-white"># Become a Instructor</p>
+                                <h1 class="font-serif font-semibold mt-2  text-white">Become a Instructor</h1>
+                                <button class="border mt-5 mt-5 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                                    Apply Now
+                                    <span class="ml-2 cursor-pointer">&rarr;</span>
+                            </div>
+                        </div>
+                        <div class="footer2">
+                            <div class="mt-10 ml-10">
+                                <p class="text-xs text-[#E4175C]"># Become a Instructor</p>
+                                <h1 class="font-serif font-semibold mt-2">Become a Instructor</h1>
+                                <button class="mt-5 mt-5 bg-rose-500 hover:bg-rose-700 text-white py-2 px-4 text-xs">
+                                    Contact Us
+                                    <span class="ml-2 cursor-pointer">&rarr;</span>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="black">
+                        <div class="relative">
+                            <div class="flex items-center justify-around  ml-32 mt-72 mr-32">
+                        <h3 class="text-white">Subscribe Newsletter</h3>
+                        <div class="flex flex-row items-center">
+                            <label for="email" class="mr-2 text-white"></label>
+                            <input type="email" id="email" class="px-2 py-1" placeholder="Enter your email">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white text-xs py-2 px-3 flex items-center">
+                                Subscribe
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                    </div>
+                    <div class="flex flex-column align-items justify-around text-white mt-20">
+                        <div>
+                            <h3>About XProtex</h3>
+                            <p class="text-xs">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br>Necessitatibus minus amet reprehen<br> consequuntur possimus quos <br>recusandae quas aut veniam.</p>
+                            <div class="flex flex-row justify-between">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>CATEGORIES</h3>
+                            <p class="text-xs">>> All Courses</p>
+                            <p class="text-xs">>> Design Courses</p>
+                            <p class="text-xs">>> Branding Design</p>
+                            <p class="text-xs">>> Architecture</p>
+                            <p class="text-xs">>> Digital Branding</p>
+                        </div>
+                        <div>
+                            <h3>CATEGORIES</h3>
+                            <p class="text-xs">>> All Courses</p>
+                            <p class="text-xs">>> Design Courses</p>
+                            <p class="text-xs">>> Branding Design</p>
+                            <p class="text-xs">>> Architecture</p>
+                            <p class="text-xs">>> Digital Branding</p>
+                        </div>
+                        <div>
+                            <h3>Get In Touch</h3>
+                            <p class="text-xs">786/A Romada tower mall <br>Brookly, NYL</p>
+                            <p class="text-xs">+987 764 8376278 87</p>
+                            <p class="text-xs">(987)787 9876565 56</p>
+                            <p class="text-xs">info@webmail.com>
+                            <p class="text-xs">jobsinfo@webmail</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <footer class="flex align-center pt-4 relative border mt-32 bg-[#000000]">
+                        <h2 class=" font-semibold text-2xl ml-32 text-white">Edulan<span class="text-[#0075FF]">.</span>
+                        </h2>
+                        <div class=" text-[#B9B9B9]">
+                            <div class=" flex flex-row justify-between mx-32 py-2 font-mono">
+                                <div class="flex flex-row align-items justify-between mr-56">info@webmail.com
+                                    <div class="nav-item cursor-pointer mx-4 ">|</div>
+                                    <div>24/7</div>
+                                    <button class="border ml-44 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                                    Sign Up
+                                    <span class="ml-2 cursor-pointer">&rarr;</span>
+                                    </button>
+                                    <div class="ml-10">
+                                        <button class="border bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                                            Login
+                                            <span class="ml-2 cursor-pointer">&rarr;</span>
+                                            </button>
+                                    </div>
+
+                                </div>
+        
+                            </div>
+                        </div>
+                        
+                    
+                    </footer>
+    
+                    </div>
+                    
+    
+
+
+            
+      
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+<script src="style.js"></script>
+</body>
+</html>
+

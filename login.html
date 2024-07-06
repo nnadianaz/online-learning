@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    
+        .slider {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: all 0.3s ease;
+        
+            
+        }
+        .nav-item {
+            color: gray;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item.active {
+        
+            color: #007bff;
+        }
+       
+.black{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 1200px;
+    bottom: 0; 
+    width: auto;
+    height: 700px;
+    background-color: black;
+    z-index: -1;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 75px;
+    
+
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row img:last-child {
+  float: right;
+}
+.container{
+   
+    display: flex;
+    padding-top: 50px;
+    margin-left: 250px;
+
+}
+.left{
+    width: 50%;
+    height: 200px;
+    background-color: white;
+
+}
+.right{
+    width: 50%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white ;
+    margin-left: -90px;
+    margin-top: 100px;
+}
+.footer1{
+    height: 200px;
+    width: 400px;
+    background-color: #0075FF;
+}
+.footer2{
+    height: 200px;
+    width: 400px;
+    background-color: white;
+}
+.text{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; color: white; 
+    transform: scaleX(1);
+    padding-top: 100px;
+}
+.h{
+    font-size: 2rem; font-weight: bold;
+    font-family: serif;
+
+}
+.icon{
+    height: 10px;
+    width: 10px;
+    filter: brightness(0.9) invert(0.9);
+}
+
+    </style>
+
+</head>
+<body class=" bg-[#F7F7F7]">
+     <!-- ......................... navbar....................... -->
+     <div class="bg-[#F7F7F7] text-[#B9B9B9]">
+        <div class=" flex justify-between mx-28 py-2 font-mono">
+            <div class="flex">info@webmail.com
+                <div class="nav-item cursor-pointer mx-4 ">|</div>
+                <div>24/7</div>
+            </div>
+            <div class="">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="flex items-center justify-between pt-2 relative bg-white p-5 shadow-lg">
+            
+        
+                <h2 class="font-serif font-semibold text-2xl ml-32">Edulan<span class="text-[#0075FF]">.</span>
+                </h2>
+                <ul class="flex space-x-4 font-semibold text-xs">
+                    <li></li><a href="Index.html" class="nav-item cursor-pointer" onclick="activateTab(this)">HOME</a></li>
+                    <li></li><a href="courses.html" class="nav-item cursor-pointer" onclick="activateTab(this)">OUR COURSES ↓</a>
+                    <ul class="sub-menu" style="display: none;">
+                        <li><a href="#">Course 1</a></li>
+                        <li><a href="#">Course 2</a></li>
+                        <li><a href="#">Course 3</a></li>
+                    </ul></li>
+                    <li></li><a href="About.html" class="nav-item cursor-pointer " onclick="activateTab(this)">ABOUT US</a></li>
+                    <li></li><a href="membership.html" class="nav-item cursor-pointer" onclick="activateTab(this)">PAGES</a></li>
+                    <li></li><a href="single-blog .html" class="nav-item cursor-pointer" onclick="activateTab(this)">BLOG & NEWS</a></li>
+                    <li></li><a href="contect.html" class="nav-item cursor-pointer" onclick="activateTab(this)">CONTACT US</a></li>
+                </ul>
+            <div id="slider" class="slider"></div>
+        
+            <ul class="flex flex-wrap items-center space-x-4">
+                <li>
+                    <form action="" class="relative">
+                        <input type="search" name="search" id="search"
+                        class="relative peer z-10 bg-transparent w-8 h-8 rounded-full border cursor-pointer outline-none
+                        pl-8 focus:w-40 focus:h-8 focus:border-gray-300 focus:cursor-text focus:pl-10 focus:pr-2 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 absolute inset-y-0 my-auto left-2 stroke-gray-500 peer-focus:stroke-gray-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </form>
+                </li>
+                <li>
+                     <form action="" class="relative">
+                        <input type="search" name="search" id="search"
+                        class="relative peer z-10 bg-transparent w-8 h-8 rounded-full border cursor-pointer outline-none
+                        pl-8 focus:w-40 focus:h-8 focus:border-gray-300 focus:cursor-text focus:pl-10 focus:pr-2 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 absolute inset-y-0 my-auto left-2 stroke-gray-500 peer-focus:stroke-lime-500" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </form> 
+                </li>
+                <li>
+                    <p class="text-gray-300 mx-5">│</p>
+                </li>
+                <li>
+                    
+                    <a href="#" class="text-black hover:text-blue-600 text-xs mr-10 font-bold">
+                        ACCOUNT ↓</a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+
+        <script>
+
+            const slider = document.getElementById('slider');
+            const navItems = document.querySelectorAll('.nav-item');
+        
+            function activateTab(element) {
+                navItems.forEach(item => item.classList.remove('active'));
+                element.classList.add('active');
+                moveSlider(element);
+            }
+        
+            function moveSlider(element) {
+                const rect = element.getBoundingClientRect();
+                slider.style.width = `${rect.width}px`;
+                slider.style.left = `${element.offsetLeft}px`;
+            }
+        
+            // Initialize the slider to the first tab
+            window.onload = () => {
+                const initialTab = document.querySelector('.nav-item');
+                if (initialTab) {
+                    initialTab.classList.add('active');
+                    moveSlider(initialTab);
+                }
+            };
+            document.addEventListener('DOMContentLoaded', () => {
+                    const initialTab = document.querySelector('.nav-item');
+                    if (initialTab) {
+                        activateTab(initialTab);
+                    }
+                });
+        
+                
+        </script>
+<!-- ....................................navbar end......................... -->
+    
+<!-- ..........background................ -->
+<div class="relative">
+    <img class="w-full h-80 object-cover" src="./Assets/pic.avif" alt="">
+  
+    <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50">
+        <div class="w-full md:w-3/4 lg:w-1/2 text-center text-white">
+            <h2 class="text-5xl font-bold mb-4">My Accout</h2>
+            <nav aria-label="breadcrumb ">
+                <ol class="breadcrumb flex justify-center ">
+                    <li class="breadcrumb-item flex inline-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 50 50"
+  style="fill:#FFFFFF;">
+  <path d="M 25 1.0507812 C 24.7825 1.0507812 24.565859 1.1197656 24.380859 1.2597656 L 1.3808594 19.210938 C 0.95085938 19.550938 0.8709375 20.179141 1.2109375 20.619141 C 1.5509375 21.049141 2.1791406 21.129062 2.6191406 20.789062 L 4 19.710938 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.710938 L 47.380859 20.789062 C 47.570859 20.929063 47.78 21 48 21 C 48.3 21 48.589063 20.869141 48.789062 20.619141 C 49.129063 20.179141 49.049141 19.550938 48.619141 19.210938 L 25.619141 1.2597656 C 25.434141 1.1197656 25.2175 1.0507812 25 1.0507812 z M 35 5 L 35 6.0507812 L 41 10.730469 L 41 5 L 35 5 z"></path>
+  </svg>
+                         
+                        <a href="index.html" class="text-white text-sm mr-1 ">HOME</a>
+                    </li>
+                    <li class="breadcrumb-item active text-white text-sm mr-1">/</li>
+                    <li class="breadcrumb-item active text-blue-600 text-sm mr-1 " aria-current="page">
+                     ACCOUNT
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+  </div>
+  <!--.......................... background end...................... -->
+    <div class="flex flex items-center justify-center h-screen space-x-8">
+        <!-- Login Form -->
+        <div class="bg-white w-96 p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4 ">Login your Accout</h2>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="login-email">Email</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login-email" type="email" placeholder="Email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="login-password">Password</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login-password" type="password" placeholder="Password">
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="bg-blue-500 hover:bg-blue-700 w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Login Now
+                    </button>
+                </div>
+                <br>
+                <div class="flex inline-flex">
+                    <input type="checkbox" name="checkbox" id="checkbox"> <span class="text-sm font-semibold">Remember me</span>
+               <div class="mx-7">
+                <p class="text-xs text-gray-300">Don't have an account <span class="font-semibold text-sm text-black">Sign up</span></p>
+               </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="bg-white w-96 p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4 ">Sign Up your Accout</h2>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="login-password">Your Name</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login-password" type="password" placeholder="Password">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="login-email">Email</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login-email" type="email" placeholder="Email">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="login-password">Password</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="login-password" type="password" placeholder="Password">
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="bg-blue-500 hover:bg-blue-700 w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Login Now
+                    </button>
+                </div>
+                <br>
+                <div class="flex inline-flex">
+                    <input type="checkbox" name="checkbox" id="checkbox"> <span class="text-sm font-semibold">Remember me</span>
+               <div class="mx-7">
+                <p class="text-xs text-gray-300">Already have an account <span class="font-semibold text-sm text-black">Log in</span></p>
+               </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- class="flex align-center justify-center pt-20 ml-10" -->
+        <div class="footer1">
+            <div class="mt-10 ml-10">
+                <p class="text-xs text-white"># Become a Instructor</p>
+                <h1 class="font-serif font-semibold mt-2  text-white">Become a Instructor</h1>
+                <button class="border mt-5 mt-5 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                    Apply Now
+                    <span class="ml-2 cursor-pointer">&rarr;</span>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="mt-10 ml-10">
+                <p class="text-xs text-[#E4175C]"># Become a Instructor</p>
+                <h1 class="font-serif font-semibold mt-2">Become a Instructor</h1>
+                <button class="mt-5 mt-5 bg-rose-500 hover:bg-rose-700 text-white py-2 px-4 text-xs">
+                    Contact Us
+                    <span class="ml-2 cursor-pointer">&rarr;</span>
+            </div>
+        </div>
+       </div>
+
+       <div class="black">
+        <div class="relative">
+            <div class="flex items-center justify-around  ml-32 mt-72 mr-32">
+        <h1 class="text-white text-2xl font-serif font-semibold">Subscribe Newsletter</h1>
+        <div class="flex flex-row items-center">
+            <label for="email" class="mr-2 text-white"></label>
+            <input type="email" id="email" class="px-2 py-1" placeholder="Enter your email">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white text-xs py-2 px-3 flex items-center">
+                Subscribe
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </button>
+        </div>
+        
+    </div>
+    <div class="flex flex-column align-items justify-around text-white mt-20">
+        <div>
+            <h3>About XProtex</h3>
+            <p class="text-xs">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. <br>Necessitatibus minus amet reprehen<br> consequuntur possimus quos <br>recusandae quas aut veniam.</p>
+            <div class="flex flex-row justify-between">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div>
+            <h3>CATEGORIES</h3>
+            <p class="text-xs">>> All Courses</p>
+            <p class="text-xs">>> Design Courses</p>
+            <p class="text-xs">>> Branding Design</p>
+            <p class="text-xs">>> Architecture</p>
+            <p class="text-xs">>> Digital Branding</p>
+        </div>
+        <div>
+            <h3>CATEGORIES</h3>
+            <p class="text-xs">>> All Courses</p>
+            <p class="text-xs">>> Design Courses</p>
+            <p class="text-xs">>> Branding Design</p>
+            <p class="text-xs">>> Architecture</p>
+            <p class="text-xs">>> Digital Branding</p>
+        </div>
+        <div>
+            <h3>Get In Touch</h3>
+            <p class="text-xs">786/A Romada tower mall <br>Brookly, NYL</p>
+            <p class="text-xs">+987 764 8376278 87</p>
+            <p class="text-xs">(987)787 9876565 56</p>
+            <p class="text-xs">info@webmail.com>
+            <p class="text-xs">jobsinfo@webmail</p>
+        </div>
+    </div>
+    </div>
+
+    <footer class="flex align-center pt-4 relative border mt-32 bg-[#000000]">
+        <h2 class="font-serif font-semibold text-2xl ml-32 text-white">Edulan<span class="text-[#0075FF]">.</span>
+        </h2>
+        <div class=" text-[#B9B9B9]">
+            <div class=" flex flex-row justify-between mx-32 py-2 font-mono">
+                <div class="flex flex-row align-items justify-between mr-56">info@webmail.com
+                    <div class="nav-item cursor-pointer mx-4 ">|</div>
+                    <div>24/7</div>
+                    <button class="border ml-44 bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                    Sign Up
+                    <span class="ml-2 cursor-pointer">&rarr;</span>
+                    </button>
+                    <div class="ml-10">
+                        <button class="border bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 text-xs">
+                            Login
+                            <span class="ml-2 cursor-pointer">&rarr;</span>
+                            </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+</body>
+</html>
